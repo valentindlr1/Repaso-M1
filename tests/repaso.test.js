@@ -8,7 +8,7 @@ const {
     growUp,
     sortByDni,
     decToHex,
-} = require('../m1-repaso.js');
+} = require('../Repaso.js');
 
 describe('Tests Repaso!!', function () {
     xdescribe('Linked Lists', function () {
