@@ -11,7 +11,7 @@ const {
 } = require('../Repaso.js');
 
 describe('Tests Repaso!!', function () {
-    xdescribe('Linked Lists', function () {
+    describe('Linked Lists', function () {
         describe('EJERCICIO A', function () {
             let linkedList;
             beforeEach(() => {

@@ -30,25 +30,26 @@ const { Queue, LinkedList, BinarySearchTree } = require('./DataStructures.js');
 
 LinkedList.prototype.getHead = function () {
     if(this.head){
-    return this.head;
+    return this.head.value;
     }
 };
-
 LinkedList.prototype.getTail = function () {
     let current = this.head;
-    if (this.next){
-        current = this.next;
-    } else return current;
+    while (current.next){
+        current = current.next;
+    } return current.value;
 };
 
 LinkedList.prototype.search = function (value) {
     let count = 0;
     let current = this.head;
-    if (this.value !== value){
-        current = this.next;
+    while (current.value !== value){
+        current = current.next;
         count++;
-    } else return count;
+    } return count;
 };
+
+// ----------- PASADO HASTA AQUI -----------
 
 /*****************************************************************/
 /*************************** Recursion ***************************/
