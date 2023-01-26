@@ -11,7 +11,7 @@ const {
 } = require('../Repaso.js');
 
 describe('Tests Repaso!!', function () {
-    describe('Linked Lists', function () {
+    xdescribe('Linked Lists', function () {
         describe('EJERCICIO A', function () {
             let linkedList;
             beforeEach(() => {
@@ -36,7 +36,7 @@ describe('Tests Repaso!!', function () {
         });
     });
 
-    xdescribe('Recursion', function () {
+    describe('Recursion', function () {
         describe('EJERCICIO B', function () {
             it('deberia devolver true si el numero es palidromo', () => {
                 expect(isPalindrome(555)).to.equal(true);

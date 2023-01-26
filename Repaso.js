@@ -49,7 +49,6 @@ LinkedList.prototype.search = function (value) {
     } return count;
 };
 
-// ----------- PASADO HASTA AQUI -----------
 
 /*****************************************************************/
 /*************************** Recursion ***************************/
@@ -62,7 +61,37 @@ LinkedList.prototype.search = function (value) {
 // Palindromo es una expresion que se lee igual de derecha a izquierda o viceversa.
 // Ejemplo de numeros palindromos: 1001, 252, 2001, 2222, 9889.
 
-function isPalindrome(number) {}
+function isPalindrome(number) {
+    if(number < 100) return null;
+    let str = number.toString();
+    let izq = [];
+    let der = [];
+    if(str.length/2 === Math.floor(str.length/2)){      // si el largo es par...
+    for(let i=0; i<=Math.floor((str.length-1)/2); i++){          // recorro primera mitad
+        izq.push(str[i]);                                       // la guardo en izq
+        }
+    for(let i=(Math.floor((str.length-1)/2))+1; i<str.length; i++){     //recorro segunda mitad
+        der.push(str[i]);                                               //la guardo en der
+        }
+    } else {
+        if(str.length/2 !== Math.floor(str.length/2)){      // si el largo es impar...
+            for(let i=0; i<Math.floor((str.length-1)/2); i++){          // recorro primera mitad
+                izq.push(str[i]);                                       // la guardo en izq
+                }
+            for(let i=(Math.floor((str.length-1)/2))+1; i<str.length; i++){     //recorro segunda mitad
+                der.push(str[i]);                                               //la guardo en der
+                 }
+        }
+    }
+    let izqJ = izq.join('');
+    let derJ = der.reverse().join('');
+    if(izqJ === derJ) return true;
+    return false;
+}
+
+// ----------- PASADO HASTA AQUI -----------
+
+
 
 /*****************************************************************/
 /*********************** Recursion y Stack ***********************/
